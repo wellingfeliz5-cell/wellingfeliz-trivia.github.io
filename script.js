@@ -4,7 +4,7 @@ const questions = [
     {
         question: "¿Cuál es el río más largo del mundo?",
         options: ["Nilo", "Amazonas", "Yangtsé", "Misisipi"],
-        answer: "Amazonas"
+        answer: "Nilo"
     },
     {
         question: "¿Quién pintó la 'Mona Lisa'?",
