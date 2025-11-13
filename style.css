@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.quiz-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 25px;
+}
+
+h2 {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.option-button {
+    background-color: #00767c;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    text-align: left;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
+
+.option-button:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+/* Estilos de retroalimentación */
+.correct {
+    background-color: #28a745 !important; /* Verde */
+    color: white;
+}
+
+.incorrect {
+    background-color: #dc3545 !important; /* Rojo */
+    color: white;
+    /* Efecto de "debe intentar otra vez" */
+    animation: shake 0.5s; 
+}
+
+@keyframes shake {
+    0%, 100% {transform: translateX(0);}
+    20%, 60% {transform: translateX(-10px);}
+    40%, 80% {transform: translateX(10px);}
+}
+
+.option-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+#feedback {
+    margin-top: 15px;
+    font-weight: bold;
+    min-height: 1.5em; /* Para evitar saltos de diseño */
+}
+
+#next-button, #result-screen button {
+    background-color: #ffc107;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+#next-button:hover, #result-screen button:hover {
+    background-color: #e0a800;
+}
+
+footer {
+    /* Eliminamos el width: 100% que causaba problemas de alineación */
+    /* Lo esencial para que se vea abajo y centrado */
+    position: absolute; /* Permite posicionarlo respecto al body */
+    bottom: 0; /* Lo fija en la parte inferior */
+    width: 100%; /* Ocupa todo el ancho de la ventana */
+    text-align: center;
+    
+    /* Estilos visuales */
+    padding: 15px 0; 
+    font-size: 0.9em;
+    color: #6c757d; 
+    border-top: 1px solid #dee2e6;
+}
+
+/* También es bueno ajustar el body para el posicionamiento absoluto */
+body {
+    /* ... otros estilos del body ... */
+    position: relative; /* Asegura que 'absolute' en footer funcione con respecto al body */
+    min-height: 100vh; /* Asegura que el body ocupe toda la altura */
+    padding-bottom: 60px; /* Añade espacio al final para que el footer no tape el contenido */
+}
+
+/* Ajuste del quiz-container para que no se superponga con el footer */
+.quiz-container {
+    /* ... otros estilos del quiz-container ... */
+    margin-bottom: 30px; /* Asegura que haya un buen espacio entre el quiz y el footer */
+}
