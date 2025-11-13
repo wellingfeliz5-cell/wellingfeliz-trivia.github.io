@@ -667,8 +667,8 @@ const biblicalQuestions = [
     },
     {
         question: "¿Cómo se llama el monte donde Jesús dio su famoso sermón?",
-        options: ["Monte del Olivar", "Monte de Sión", "Monte Sinaí", "Monte de los Olivos"],
-        answer: "Monte del Olivar"
+        options: ["Monte del Olivar", "Monte de Sión", "Monte Sinaí", "Monte de las Bienaventuranzas"],
+        answer: "Monte de las Bienaventuranzas"
     },
     {
         question: "¿Quién fue el gobernador romano que lavó sus manos antes de entregar a Jesús?",
