@@ -6,6 +6,8 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
+    position: relative; /* Base para el footer */
+    padding-bottom: 60px; /* Espacio para el footer */
 }
 
 .quiz-container {
@@ -16,6 +18,7 @@ body {
     width: 90%;
     max-width: 600px;
     text-align: center;
+    margin-bottom: 30px;
 }
 
 h1 {
@@ -26,6 +29,33 @@ h1 {
 h2 {
     color: #555;
     margin-bottom: 20px;
+}
+
+/* Estilo para los botones de selección de categoría */
+.category-button {
+    background-color: #00767c;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.1s;
+    box-shadow: 0 4px #00565a; /* Sombra para efecto 3D */
+}
+
+.category-button:hover {
+    background-color: #0056b3;
+}
+
+.category-button:active {
+    background-color: #004085;
+    transform: translateY(2px);
+    box-shadow: 0 2px #00565a;
 }
 
 .options-container {
@@ -97,30 +127,12 @@ h2 {
 }
 
 footer {
-    /* Eliminamos el width: 100% que causaba problemas de alineación */
-    /* Lo esencial para que se vea abajo y centrado */
-    position: absolute; /* Permite posicionarlo respecto al body */
-    bottom: 0; /* Lo fija en la parte inferior */
-    width: 100%; /* Ocupa todo el ancho de la ventana */
+    position: absolute; 
+    bottom: 0; 
+    width: 100%; 
     text-align: center;
-    
-    /* Estilos visuales */
     padding: 15px 0; 
     font-size: 0.9em;
     color: #6c757d; 
     border-top: 1px solid #dee2e6;
-}
-
-/* También es bueno ajustar el body para el posicionamiento absoluto */
-body {
-    /* ... otros estilos del body ... */
-    position: relative; /* Asegura que 'absolute' en footer funcione con respecto al body */
-    min-height: 100vh; /* Asegura que el body ocupe toda la altura */
-    padding-bottom: 60px; /* Añade espacio al final para que el footer no tape el contenido */
-}
-
-/* Ajuste del quiz-container para que no se superponga con el footer */
-.quiz-container {
-    /* ... otros estilos del quiz-container ... */
-    margin-bottom: 30px; /* Asegura que haya un buen espacio entre el quiz y el footer */
 }
