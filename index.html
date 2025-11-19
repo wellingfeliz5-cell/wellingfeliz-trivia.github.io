@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mega Trivia de Conocimiento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <!-- Pantalla de Inicio -->
+        <div id="start-screen">
+            <h1>🧠 Selecciona la Categoría de Trivia</h1>
+            <button id="general-button" class="category-button">Cultura General (100 Preguntas)</button>
+            <button id="biblical-button" class="category-button">Preguntas Bíblicas (105 Preguntas)</button>
+            <button id="medical-button" class="category-button">Medicina y Cuerpo Humano (33 Preguntas)</button>
+        </div>
+        
+        <!-- Pantalla de Juego (Inicialmente oculta) -->
+        <div id="game-screen" style="display: none;">
+            <h1 id="quiz-title"></h1>
+            <div id="question-area">
+                <p id="question-number"></p>
+                <h2 id="question"></h2>
+                <div id="options" class="options-container">
+                    <!-- Opciones de respuesta se insertan aquí -->
+                </div>
+            </div>
+            
+            <p id="feedback"></p>
+            
+            <button id="next-button" style="display: none;">Siguiente Pregunta</button>
+            
+            <!-- Pantalla de Resultados -->
+            <div id="result-screen" style="display: none;">
+                <h2>🎉 ¡Juego Terminado!</h2>
+                <p id="final-score"></p>
+                <button onclick="location.reload()">Volver a Categorías</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>Todos los derechos reservados &copy; 2025 - By: Welling Feliz.</footer>
+    <script src="script.js"></script>
+</body>
+</html>
